@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.moduretick.domain.DadosBancarios;
-import com.moduretick.domain.Pessoa;
 
 @Configuration
 public class MigrarDadosBancariosStepConfig {
