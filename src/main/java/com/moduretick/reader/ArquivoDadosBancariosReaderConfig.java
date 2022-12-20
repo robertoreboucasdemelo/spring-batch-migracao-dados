@@ -13,6 +13,7 @@ public class ArquivoDadosBancariosReaderConfig {
 	
 	@Bean
 	public FlatFileItemReader<DadosBancarios> arquivoDadosBancariosReader(){
+		
 		return new FlatFileItemReaderBuilder<DadosBancarios>()
 				.name("arquivoDadosBancariosReader")
 				.resource(new FileSystemResource("files/dados_bancarios.csv"))

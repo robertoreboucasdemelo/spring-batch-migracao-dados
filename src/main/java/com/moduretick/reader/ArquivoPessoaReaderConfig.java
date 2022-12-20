@@ -18,6 +18,7 @@ public class ArquivoPessoaReaderConfig {
 	
 	@Bean
 	public FlatFileItemReader<Pessoa> arquivoPessoaReader(){
+		
 		return new FlatFileItemReaderBuilder<Pessoa>()
 				.name("arquivoPessoaReader")
 				.resource(new FileSystemResource("files/pessoas.csv"))

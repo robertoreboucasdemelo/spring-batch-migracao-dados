@@ -11,18 +11,18 @@ import org.springframework.context.annotation.Configuration;
 import com.moduretick.domain.Pessoa;
 
 @Configuration
-public class MigrarPessoasStepConfig {
+public class MigrarPessoaStepConfig {
 	
 	@Autowired
 	private StepBuilderFactory stepBuilderFactory;
 	
 	@Bean
-	public Step migrarPessoasStep(
+	public Step migrarPessoaStep(
 			ItemReader<Pessoa> arquivoPessoaReader,
 			ItemWriter<Pessoa> bancoPessoaWriter) {
 		
 		return stepBuilderFactory
-				.get("migrarPessoaStep")
+				.get("migrarPessoasStep")
 				.<Pessoa, Pessoa> chunk(1)
 				.reader(arquivoPessoaReader)
 				.writer(bancoPessoaWriter)
